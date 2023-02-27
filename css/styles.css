@@ -1,0 +1,134 @@
+body {
+	background-color: rgb(0, 15, 28); /*#021b33;*/
+	color: rgb(75, 255, 100);
+	min-height: 600vh;
+}
+
+h1, p {
+	color: rgb(75, 255, 100);
+}
+
+.logo {
+	font-family: Courier, monospace;
+	font-size: 30px;
+	color: rgb(75, 255, 100);
+	text-decoration: none;
+	margin: 30px;	
+}
+
+.navbar{
+        display: flex;
+	width: 100%;
+	background-color: rgb(0, 15, 28);
+	position: fixed;
+	top: 0;
+}
+
+.navbar.is-visible {
+	visibility: visible;
+}
+
+.navbar.is-hidden {
+	visibility: hidden;
+}
+
+.navbar-menu {
+	margin-left: auto;
+	margin-top: 30px;
+	margin-right: 30px;
+	display: flex;
+	font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important; /*Courier, monospace;*/
+	font-size: 15px;
+}
+
+.navbar-menu li {
+	list-style: none;
+	margin-left: 30px;
+}
+
+.navbar-menu li a {
+	color: rgb(75, 255, 100);
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+
+.navbar-menu li a:hover {
+        color: rgb(255, 255, 255);
+}
+
+.base-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 100%;
+}
+
+.sections{
+	min-height: 100vh;
+	width: 80em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important;
+}
+
+.sections div {
+	display: flex;
+	align-items: center;
+}
+
+.sections .text {
+	width: 50%;
+	margin-right: 40px;
+	display: block;
+}
+
+.sections div img{
+	border: 2px solid rgb(75, 255, 100);
+}
+
+.sections h1 {
+	font-family: Courier, monospace;
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#welcome p {
+	font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important; /*Courier, monospace;*/
+	font-size: 30px;
+	font-weight: normal;
+	color: rgb(75, 255, 100);
+}
+
+.sections h2 {
+	color:#fba922;
+}
+
+.sections h3 {
+	color: #3971ed;
+}
+
+.sections p {
+	color: #c5c8c6;
+}
+
+.sections ul {
+	list-style: none;
+}
+
+.sections li {
+	color: #c5c8c6;
+}
+
+.sections li::before{
+	content: "#";
+	color: rgb(75, 255, 100);
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
