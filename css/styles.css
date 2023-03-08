@@ -101,7 +101,38 @@ h1, p {
 	font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important; /*Courier, monospace;*/
 	font-size: 30px;
 	font-weight: normal;
-	color: rgb(75, 255, 100);
+}
+
+.type {
+	color: #0000;
+	background:
+		linear-gradient(-90deg,  rgb(75, 255, 100) 0.7em,  #0000 0) 0.7em 0, /*5px e 10px*/
+		linear-gradient(rgb(75, 255, 100) 0 0) 0 0;
+	background-size: 0 200%;
+	-webkit-background-clip:padding-box,text;
+	background-clip:padding-box,text;
+	background-repeat:no-repeat;
+}
+
+.normal {
+	animation:
+                b .7s infinite steps(1),
+                t calc(var(--n)*.1s) steps(var(--n)) forwards;
+}
+
+.fast {
+	animation:
+                b .7s 1.5s infinite steps(1),
+                t 8s 1.5s steps(calc(var(--n)/5)) forwards;
+}
+
+@keyframes t{
+	from {background-size:0 200%}
+	to {background-size: calc(var(--n)*1ch) 200%;}
+}
+
+@keyframes b{
+	50% {background-position:0 -100%,0 0}
 }
 
 .sections h2 {
