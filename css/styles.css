@@ -37,7 +37,7 @@ h1, p {
 	margin-top: 30px;
 	margin-right: 30px;
 	display: flex;
-	font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important; /*Courier, monospace;*/
+	font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important;
 	font-size: 15px;
 }
 
@@ -98,7 +98,7 @@ h1, p {
 }
 
 #welcome p {
-	font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important; /*Courier, monospace;*/
+	font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important;
 	font-size: 30px;
 	font-weight: normal;
 }
@@ -163,3 +163,128 @@ h1, p {
 	margin-left: -1em;
 }
 
+.project-list {
+	display: grid;
+	grid-template-columns: 27% 27% 27%;
+	grid-template-rows: 300px;
+	column-gap: 6%;
+}
+
+.project-section-title {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.project {
+	background-color: #000a12;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	transition: width .5s;
+	z-index: 0;
+	border-radius: 7px;
+	border: solid 1px rgb(75, 255, 100);
+	box-shadow: 10px 10px 20px black;
+}
+
+.project-ico {
+	height: 50px;
+	padding-top: 30px;
+}
+
+.project-title, .project-status {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.project-title {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.project:hover {
+	width: 115%;
+	height: 600px;
+	z-index: 10;
+	position: relative;
+}
+
+.project-desc {
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.project-desc-container{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.project:hover .project-desc {
+	visibility: visible;
+	color: #0000;
+	background:
+                linear-gradient(-90deg, #c5c8c6 0.7em,  #0000 0) 0.7em 0,
+                linear-gradient(#c5c8c6 0 0) 0 0;
+        background-size: 0 200%;
+        -webkit-background-clip:padding-box,text;
+        background-repeat:no-repeat;
+	animation:
+                b .7s infinite steps(1),
+                t 3s steps(calc(var(--n))) forwards;
+}
+
+.project ul, .project li {
+	visibility: hidden;
+}
+
+.project li::before {
+	visibility: visible;
+        overflow: visible;
+	color: #0000;
+	background:
+                linear-gradient(-90deg, rgb(75, 255, 100) 0.7em,  #0000 0) 0.7em 0,
+                linear-gradient(rgb(75, 255, 100) 0 0) 0 0;
+        background-size: 0 200%;
+        background-clip:padding-box,text;
+}
+
+.project:hover li span {
+	visibility: visible;
+	color:#0000;
+ 	background:
+		linear-gradient(#c5c8c6 0 0) 0 50%/150% 95%,
+		linear-gradient(#c5c8c6 0 0) 0 0  /100% 100%;
+	-webkit-background-clip:padding-box,text;
+	background-clip:padding-box,text;
+	background-repeat:no-repeat;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	animation: 
+		a 0.8s forwards,
+		z 0.8s .6s forwards;
+}
+
+.project:hover li::before {
+        color:#0000;
+        background:
+                linear-gradient(rgb(75, 255, 100) 0 0) 0 50%/150% 95%,
+                linear-gradient(rgb(75, 255, 100) 0 0) 0 0  /100% 100%;
+        -webkit-background-clip:padding-box,text;
+        background-clip:padding-box,text;
+        background-repeat:no-repeat;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        animation:
+                a 0.4s forwards,
+                z 0.4s .3s forwards;
+}
+
+@keyframes a {
+	from { background-size: 0 95%, 0 100% }
+}
+
+@keyframes z {
+	100% { background-position: -200% 50%, 0 0 }
+}

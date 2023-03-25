@@ -2,7 +2,7 @@
 ## Color Scheme for reference
 
 - Dark blue (background): rgb(0, 15, 28)
-- Green: rgb(75, 255, 100);
+- Green: rgb(75, 255, 100); #4bff64
 - Yellow: #fba922
 - Red: #cc342b
 - Blue: #3971ed
